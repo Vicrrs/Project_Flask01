@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def principal():
-    return render_template('index.html')
+    nome = "Victor Roza"
+    idade = 23
+    return render_template('index.html', nome=nome, idade=idade)
 
 
 @app.route("/sobre")
