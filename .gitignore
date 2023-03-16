@@ -1,0 +1,21 @@
+# arquivos de byte compilado Python
+__pycache__/
+*.pyc
+
+# ambiente virtual
+venv/
+
+# arquivos de log
+*.log
+
+# arquivos de backup
+*~
+
+# arquivos gerados durante a execução do projeto
+instance/
+build/
+dist/
+
+# arquivos de configuração sensíveis que não devem ser compartilhados
+config.py
+secrets.py
