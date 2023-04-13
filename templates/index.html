@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Lista de Frutas</h1>
+    <h1 style="text-align: center">Lista de Frutas</h1>
     <hr>
     <p>{{Frutas}}</p>
     <ol>
@@ -19,6 +19,11 @@
             </li>
 
         {% endfor %}
+        <form>
+            <label>Fruta</label>
+            <input type="text", name="fruta">
+            <button>Adicionar</button>
+        </form>
     </ol>    
 </body>
 </html>
