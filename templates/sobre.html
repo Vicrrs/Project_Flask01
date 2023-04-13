@@ -9,15 +9,19 @@
 <body>
     <h1 style="text-align: center;">Diario de notas</h1>
     <hr>
-    <p>
-        <li>
-            {% for chave, valor in notas.items() %}
-                <details>
-                    <summary>{{chave}}</summary>
-                    <p>{{valor}}</p>
-                </details>
-            {% endfor %}
-        </li>
-    </p>
+        {% for chave, valor in notas.items() %}
+            <details>
+                <summary>{{chave}}</summary>
+                <p>{{valor}}</p>
+            </details>
+        {% endfor %}
+    <form action="{{url_for('sobre')}}" method="POST">
+        <label>Aluno</label>
+        <input type="text" name="aluno" required>
+        <label>Nota</label>
+        <input type="text" name="nota" required>
+        <button>Adicionar</button>
+    </form>
+    
 </body>
 </html>
