@@ -13,7 +13,10 @@
         {{notas}}
         <li>
             {% for chave, valor in notas.items() %}
-                {{chave}} - {{valor}}
+                <details>
+                    <summary>{{chave}}</summary>
+                    <p>{{valor}}</p>
+                </details>
             {% endfor %}
         </li>
     </p>
