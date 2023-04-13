@@ -21,7 +21,7 @@ def sobre():
         "Aluno":7.0,
         "Sicrano":8.5
     }
-    return render_template('sobre.html')
+    return render_template('sobre.html', notas=notas)
 
 
 if __name__ == "__main__":
