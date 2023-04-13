@@ -2,10 +2,9 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-
+frutas = []
 @app.route("/", methods=["GET", "POST"])
 def principal():
-    frutas = []
     if request.method == "POST":
         if request.form.get("fruta"):
             frutas.append(request.form.get("fruta"))
