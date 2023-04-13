@@ -11,7 +11,7 @@ def principal():
     return render_template('index.html', frutas=frutas)
 
 
-@app.route("/sobre")
+@app.route("/sobre", methods=["GET", "POST"])
 def sobre():
     notas = {
         "Fulano":5.0,
