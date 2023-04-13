@@ -1,15 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def principal():
-    Frutas = [
-            "Uva", "Morango", "Laranja",
-            "Banana", "Melancia", "Mamão", 
-            "Maçã", "Abacaxi", "Açai"
-            ]
+    # Frutas = [
+    #         "Uva", "Morango", "Laranja",
+    #         "Banana", "Melancia", "Mamão", 
+    #         "Maçã", "Abacaxi", "Açai"
+    #         ]
+    Frutas = []
     return render_template('index.html', Frutas=Frutas)
 
 
