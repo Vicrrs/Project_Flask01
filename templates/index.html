@@ -11,6 +11,15 @@
     <h1>Integração HTML ao FLASK</h1>
     <hr>
     <p>{{Frutas}}</p>
+    <ol>
+        {% for fruta in Frutas %}
+
+            <li>
+                {{fruta}}
+            </li>
+
+        {% endfor %}
+    </ol>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
 </body>
