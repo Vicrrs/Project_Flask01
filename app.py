@@ -5,11 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def principal():
-    # Frutas = [
-    #         "Uva", "Morango", "Laranja",
-    #         "Banana", "Melancia", "Mamão", 
-    #         "Maçã", "Abacaxi", "Açai"
-    #         ]
+    # Frutas = ["Uva", "Morango", "Laranja"]
     Frutas = []
     return render_template('index.html', Frutas=Frutas)
 
