@@ -10,16 +10,11 @@
 
     <h1 style="text-align: center">Lista de Frutas</h1>
     <hr>
-    <p>{{Frutas}}</p>
     <ol>
-        {% for fruta in Frutas %}
-
-            <li>
-                {{fruta}}
-            </li>
-
+        {% for fruta in frutas %}
+            <li>{{fruta}}</li>
         {% endfor %}
-        <form>
+        <form action="{{url_for('principal')}}" method="POST">
             <label>Fruta</label>
             <input type="text", name="fruta">
             <button>Adicionar</button>

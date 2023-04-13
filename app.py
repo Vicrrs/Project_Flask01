@@ -5,9 +5,11 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def principal():
-    # Frutas = ["Uva", "Morango", "Laranja"]
-    Frutas = []
-    return render_template('index.html', Frutas=Frutas)
+    frutas = []
+    if request.method == "POST":
+        if request.form.get("fruta"):
+            frutas.append(request.form.get("fruta"))
+    return render_template('index.html', frutas=frutas)
 
 
 @app.route("/sobre")
