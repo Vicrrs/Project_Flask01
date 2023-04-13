@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route("/")
 def principal():
     Frutas = ["Uva", "Morango", "Laranja",
-              "Banana", "Melancia", "Mamão", "Maçã"]
+            "Banana", "Melancia", "Mamão", 
+            "Maçã", "Abacaxi", "Açai"]
     return render_template('index.html', Frutas=Frutas)
 
 
