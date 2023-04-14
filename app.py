@@ -16,13 +16,11 @@ def principal():
 
 @app.route("/sobre", methods=["GET", "POST"])
 def sobre():
-    notas = {
-        "Fulano": 5.0,
-        "Beltrano": 6.0,
-        "Aluno": 7.0,
-        "Sicrano": 8.5
-    }
-    return render_template('sobre.html', notas=notas)
+    if request.method == "POST":
+        if request.form.get("aluno") and request.form.get("nota"):
+            registros.append({"aluno": request.form.get("aluno"),
+                              "nota": request.form.get("nota")})
+    return render_template('sobre.html', registros=registros)
 
 
 if __name__ == "__main__":
