@@ -3,6 +3,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 frutas = []
+
+
 @app.route("/", methods=["GET", "POST"])
 def principal():
     if request.method == "POST":
@@ -14,10 +16,10 @@ def principal():
 @app.route("/sobre", methods=["GET", "POST"])
 def sobre():
     notas = {
-        "Fulano":5.0,
-        "Beltrano":6.0,
-        "Aluno":7.0,
-        "Sicrano":8.5
+        "Fulano": 5.0,
+        "Beltrano": 6.0,
+        "Aluno": 7.0,
+        "Sicrano": 8.5
     }
     return render_template('sobre.html', notas=notas)
 
