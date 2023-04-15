@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rota sobre</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block conteudo %}
     <h1 style="text-align: center;">Diario de notas</h1>
     <hr>
         {% for registro in registros %}
@@ -23,5 +16,4 @@
         <button>Adicionar</button>
     </form>
     
-</body>
-</html>
+{% endblock conteudo %}
