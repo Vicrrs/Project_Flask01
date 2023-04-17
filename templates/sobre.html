@@ -9,11 +9,22 @@
             </details>
         {% endfor %}
     <form action="{{url_for('sobre')}}" method="POST">
-        <label>Aluno</label>
-        <input type="text" name="aluno" required>
-        <label>Nota</label>
-        <input type="text" name="nota" required>
-        <button>Adicionar</button>
+        <div class="form-group">
+
+            <label for="NomeAluno">Aluno</label>
+            <input class="form-control" id="NomeAluno" type="text" name="aluno" placeholder="Digite o nome do Aluno(a)" required>   
+
+        </div>
+        
+        <div class="form-group">
+
+            <label for="NotaAluno">Aluno</label>
+            <input class="form-control" id="NotaAluno" type="text" name="nota" placeholder="Digite a nota do Aluno(a)" required>
+
+        </div>
+
+        
+        <button class="btn btn-success">Adicionar</button>
     </form>
     
 {% endblock conteudo %}
