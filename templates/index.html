@@ -7,9 +7,12 @@
             <li>{{fruta}}</li>
         {% endfor %}
         <form action="{{url_for('principal')}}" method="POST">
-            <label>Fruta</label>
-            <input type="text", name="fruta">
-            <button>Adicionar</button>
+            <div class="form-group">
+                <label for="ExemploFruta">Fruta</label>
+                <input class="form-control" id="ExemploFruta" type="text", name="fruta" placeholder="Digite o nome de uma fruta">   
+            </div>
+            
+            <button class="btn btn-success">Adicionar</button>
         </form>
     </ol> 
 {% endblock conteudo %}
